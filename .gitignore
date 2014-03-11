@@ -52,3 +52,4 @@ vendor/
 .DS_Store
 
 ### Phalcon ###
+Public/phpmyadmin

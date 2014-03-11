@@ -4,7 +4,7 @@ server {
     server_name localhost;
 
     index index.php index.html index.htm;
-    set $root_path '/var/www/public';
+    set $root_path '/vagrant/src/Public';
     root $root_path;
 
     location /api/ {
@@ -24,7 +24,7 @@ server {
         fastcgi_pass unix:/var/run/php5-fpm.sock;
         fastcgi_index /index.php;
 
-        include /etc/nginx/fastcgi_params;
+        include /etc/nginx/includes/fastcgi_params.inc;
 
         fastcgi_split_path_info       ^(.+\.php)(/.+)$;
         fastcgi_param PATH_INFO       $fastcgi_path_info;
